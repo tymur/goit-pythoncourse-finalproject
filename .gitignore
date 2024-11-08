@@ -1,0 +1,45 @@
+# Віртуальне середовище
+venv/
+env/
+*.venv
+.Python
+
+# Кеш-файли Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Лог-файли
+*.log
+
+# Системні файли операційних систем
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Налаштування IDE та редакторів коду
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Тимчасові файли тестів
+.tox/
+.coverage
+*.coverage
+.cache
+pytest_cache/
+
+# Згенеровані файли документації та збірки
+build/
+dist/
+docs/_build/
+*.egg-info/
+.eggs/
+
+# Конфіденційні дані
+.env
+*.secret
+
+# Пакетні файли
+*.egg
+*.whl
