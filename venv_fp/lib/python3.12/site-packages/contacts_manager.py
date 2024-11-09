@@ -13,6 +13,15 @@ class ContactsManager:
         Storage.save_contacts(self.contacts)
         print(Fore.GREEN + "Контакт успішно додано.")
 
+    def edit_contact(self, name, field, new_value):
+        contact = self.find_contact_by_name(name)
+        if contact:
+            setattr(contact, field, new_value)
+            Storage.save_contacts(self.contacts)
+            print(Fore.GREEN + f"Контакт '{name}' оновлено.")
+        else:
+            print(Fore.RED + "Контакт не знайдено.")
+
     def delete_contact(self, name):
         for contact in self.contacts:
             if contact.name == name:
@@ -34,10 +43,8 @@ class ContactsManager:
             print(Fore.RED + "Немає контактів для відображення.")
             return
 
-        # Відображаємо контакти у вигляді таблиці
         table = PrettyTable()
         table.field_names = ["Ім'я", "Адреса", "Телефон", "Email", "День народження"]
         for contact in self.contacts:
             table.add_row([contact.name, contact.address, contact.phone, contact.email, contact.birthday])
-
         print(table)

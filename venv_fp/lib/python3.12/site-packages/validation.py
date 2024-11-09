@@ -1,23 +1,18 @@
 import re
-from colorama import Fore, Style, init
-
-# Ініціалізуємо colorama
-init(autoreset=True)
+from colorama import Fore
 
 def validate_phone(phone):
-    """Перевіряє коректність номера телефону (+380XXXXXXXXX або XXXXXXXXXX)"""
-    pattern = r"^\+?\d{10,15}$"  # Дозволяє формат +380XXXXXXXXX або 10-15 цифр без + в початку
-    if re.match(pattern, phone):
+    if re.match(r"^\+?1?\d{9,15}$", phone):
+        print(Fore.GREEN + "Телефон пройшов валідацію.")
         return True
     else:
-        print(Fore.RED + "Некоректний номер телефону. Введіть номер у форматі +380XXXXXXXXX або XXXXXXXXXX.")
+        print(Fore.RED + "Невірний формат телефону. Будь ласка, введіть коректний номер.")
         return False
 
 def validate_email(email):
-    """Перевіряє коректність електронної пошти"""
-    pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
-    if re.match(pattern, email):
+    if re.match(r"^[\w\.-]+@[\w\.-]+\.\w+$", email):
+        print(Fore.GREEN + "Електронна пошта пройшла валідацію.")
         return True
     else:
-        print(Fore.RED + "Некоректна електронна пошта. Введіть коректну адресу (username@domain.com).")
+        print(Fore.RED + "Невірний формат електронної пошти. Будь ласка, введіть коректну адресу.")
         return False
