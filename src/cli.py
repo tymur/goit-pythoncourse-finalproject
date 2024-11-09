@@ -19,6 +19,7 @@ def display_menu():
         ["7", "Видалити нотатку"],
         ["8", "Показати всі нотатки"],
         ["9", "Пошук нотаток за тегом"],
+        ["10", "Сортувати нотатки за тегами"], 
         ["0", "Вийти"]
     ])
     print(menu_table)
@@ -127,6 +128,9 @@ def main():
         elif choice == "9":
             tag = input("Введіть тег для пошуку: ")
             notes_manager.find_notes_by_tag(tag)
+
+        elif choice == "10":
+            notes_manager.sort_notes_by_tag()
 
         elif choice == "0":
             print(Fore.GREEN + "До побачення!")

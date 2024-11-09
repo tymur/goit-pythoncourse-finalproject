@@ -44,6 +44,9 @@ class CommandParser:
         # Пошук нотаток за тегом
         elif command.startswith("пошук нотаток за тегом"):
             return "find_notes_by_tag", command[21:].strip()
+        
+        elif command == "сортувати нотатки за тегами":
+            return "sort_notes_by_tag", None
 
         # Якщо команда не розпізнана
         return None
