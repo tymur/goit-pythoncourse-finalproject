@@ -1,12 +1,5 @@
 [
     {
-        "name": "\u0422\u0435\u0441\u0442",
-        "address": "\u041a\u0438\u0457\u0432",
-        "phone": "5647",
-        "email": "\u0456\u0432\u043f\u0456\u0432\u043f",
-        "birthday": "2000-21-12"
-    },
-    {
         "name": "\u0406\u0432\u0430\u043d ",
         "address": "\u041a\u0438\u0457\u0432",
         "phone": "0504768472",
@@ -15,9 +8,23 @@
     },
     {
         "name": "Sergiy",
-        "address": "Kyiv",
+        "address": "Dnipro",
         "phone": "050464645",
         "email": "kdshgj@gmail.com",
         "birthday": "2000-12-12"
+    },
+    {
+        "name": "John",
+        "address": "Kyiv",
+        "phone": "+380507775553",
+        "email": "skdjgs@gmail.com",
+        "birthday": "2000-11-11"
+    },
+    {
+        "name": "Alya",
+        "address": "Vyshneve",
+        "phone": "30671122337",
+        "email": "alya@test.com",
+        "birthday": "2000-11-11"
     }
 ]
