@@ -1,0 +1,9 @@
+[
+    {
+        "title": "Test note",
+        "content": "Test text",
+        "tags": [
+            "testtag"
+        ]
+    }
+]
