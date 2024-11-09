@@ -65,3 +65,18 @@ class NotesManager:
             print(table)
         else:
             print(Fore.RED + f"Нотаток з тегом '{tag}' не знайдено.")
+    
+    def sort_notes_by_tag(self):
+        sorted_notes = sorted(self.notes, key=lambda note: note.tags[0].lower() if note.tags else "")
+        
+        if sorted_notes:
+            # Відображення відсортованих нотаток у вигляді таблиці
+            table = PrettyTable()
+            table.field_names = ["Назва", "Зміст", "Теги"]
+            for note in sorted_notes:
+                tags_formatted = ", ".join(note.tags) if note.tags else "Немає"
+                table.add_row([note.title, note.content, tags_formatted])
+            print(Fore.GREEN + "Нотатки, відсортовані за тегами:")
+            print(table)
+        else:
+            print(Fore.RED + "Немає нотаток для сортування.")
